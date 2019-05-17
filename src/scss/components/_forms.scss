@@ -82,6 +82,10 @@ _:-ms-fullscreen, :root .form-group .form-control[type="text"] {
     margin-bottom: 0;
     cursor: pointer;
     line-height: 1.3;
+    @media #{$mobile} {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+    }
 }
 .has-error.checkbox label,
 .has-success.checkbox label {
@@ -169,5 +173,8 @@ form .subscribe__btn-wrap {
     margin: 34px 0 0;
     @media #{$laptop} {
         margin-top: 24px;
+    }
+    @media #{$mobile} {
+        margin-top: 33px;
     }
 }

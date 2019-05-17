@@ -1,12 +1,29 @@
 .footer {
     padding-top: 95px;
     padding-bottom: 52px;
+    &__wrap {
+        position: relative;
+        overflow: hidden;
+        @media #{$mobile} {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20px;
+            padding-bottom: 65px;
+        }
+    }
     @media #{$laptop} {
         padding-top: 94px;
+    }
+    @media #{$mobile} {
+        padding-top: 34px;
     }
     &__left-side {
         @media #{$laptop} {
             padding-right: 0;
+        }
+        @media #{$mobile} {
+            order: 2;
+            margin-top: 50px;
         }
     }
     &__right-side {
@@ -15,6 +32,9 @@
         }
         @media #{$tablet} {
             padding-left: 15px;
+        }
+        @media #{$mobile} {
+            order: 3;
         }
     }
     &__subtitle {
@@ -26,13 +46,6 @@
         margin-bottom: 25px;
         @media #{$tablet} {
             font-size: 12px;
-        }
-    }
-    &__subtitle.copyright {
-        text-transform: none;
-        @media #{$tablet} {
-            font-size: 14px;
-            line-height: 20px;
         }
     }
     &__socials-list {
@@ -76,6 +89,13 @@
         @media #{$tablet} {
             margin-bottom: 41px;
         }
+        @media #{$mobile} {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-bottom: 37px;
+        }
     }
     .btn-empty-light {
         margin-right: 15px;
@@ -113,6 +133,10 @@
         @media #{$tablet} {
             padding-top: 24px;
         }
+        @media #{$mobile} {
+            order: 1;
+            text-align: left;
+        }
     }
     &__title {
         color: $base-font-color;
@@ -126,12 +150,18 @@
             line-height: 18.99px;
             margin-bottom: 10px;
         }
+        @media #{$mobile} {
+            margin-left: 19px;
+        }
     }
     .smile-logo {
         @media #{$tablet} {
             width: 133px;
             display: block;
             margin: 0 auto;
+        }
+        @media #{$mobile} {
+            margin: 0;
         }
     }
     &__logo {
@@ -140,6 +170,11 @@
         margin-top: 6px;
         @media #{$tablet} {
             margin-bottom: 39px;
+        }
+        @media #{$mobile} {
+            margin-top: 0px;
+            margin-bottom: 40px;
+            margin-left: 2px;
         }
     }
     &__privacy {
@@ -163,6 +198,22 @@
             @media #{$tablet} {
                 line-height: 28px;
             }
+        }
+    }
+    &__copyright {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        text-transform: none;
+        color: $base-font-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        @media #{$tablet} {
+            font-size: 14px;
+        }
+        @media #{$mobile} {
+            left: 35px;
         }
     }
 }

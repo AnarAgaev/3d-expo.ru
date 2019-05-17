@@ -9,6 +9,10 @@
     transition: all .3s;
     cursor: pointer;
     overflow: hidden;
+    @media #{$mobile} {
+        height: 37px;
+        border-radius: 19px;
+    }
     &::before {
         content: '';
         display: block;
@@ -31,6 +35,11 @@
         font-weight: 700;
         text-transform: uppercase;
         padding: 0 31px;
+        @media #{$mobile} {
+            line-height: 39px;
+            font-size: 12px;
+            letter-spacing: 0.6px;
+        }
     }
     &:hover {
         text-decoration: none;

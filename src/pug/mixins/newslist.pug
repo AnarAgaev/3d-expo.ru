@@ -4,7 +4,7 @@ mixin newslist(images, dates, descs)
         .container
             .row
                 - for (var i = 0; i < 3; i++)
-                    .col-sm-4
+                    .col-xs-12.col-sm-4
                         .newslist__item
                             a(href="#").newslist__pic
                                 img(src="/images/" + images[i] alt="").newslist__pic

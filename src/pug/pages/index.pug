@@ -19,7 +19,7 @@ block variables
 block content
     section.first-screen
         .container
-            .col-md-7.first-screen__wrap
+            .col-xs-12.col-md-7.first-screen__wrap
                 h1.first-screen__title 3D Print Expo 2019
                 h2.first-screen__subtitle Выставка передовых технологий 3D-печати и сканирования
                 .first-screen__date 4-5 октября, Москва
@@ -33,20 +33,20 @@ block content
         span.link-target#exposition
         .container
             .row
-                .col-sm-6
+                .col-xs-12.col-sm-6
                     h3.info__title Выставка
                     p.info__desc Крупнейшая в Восточной Европе выставка передовых технологий 3D-печати и сканирования – 3D Print Expo. Здесь каждый сможет узнать, что такое аддитивные технологии, посмотреть, как работают и где используются 3D-печатные принтеры и сканеры в современном мире, а также узнать о последних достижениях в области 3D-печати.
                     p.info__desc.accent Вас ждёт встреча с главными компаниями индустрии, гигантами трёхмерных технологий, которые определяют завтрашнее состояние этого рынка.
                     .info__btn-wrp
                         a(data-description="участники").btn-empty
-                .col-sm-6
+                .col-xs-12.col-sm-6
                     img(src="/images/exposition.png" alt="Выставка").info__pic
     section.info.light-back
         .container
             .row
-                .col-sm-6
+                .col-xs-12.col-sm-6
                     img(src="/images/lekory.png" alt="Лекорий").info__pic
-                .col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent
+                .col-xs-12.col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent
                     h3.info__title лекорий
                     p.info__desc Лекторий 3D Print Expo 2019 соберет лучших специалистов индустрии, которые представят актуальные и успешные кейсы, расскажут о достижениях и прорывах этого года, обсудят тенденции и стратегии, охватывающие самые различные сферы применения 3D-технологий.
                     .info__btn-wrp
@@ -54,19 +54,19 @@ block content
     section.info
         .container
             .row
-                .col-sm-6
+                .col-xs-12.col-sm-6
                     h3.info__title Мастер-классы
                     p.info__desc Захватывающие мастер-классы для детей и взрослых дадут возможность расширить круг интересов и насладиться увлекательным процессом.
                     .info__btn-wrp
                         a(data-description="программа").btn-empty
-                .col-sm-6
+                .col-xs-12.col-sm-6
                     img(src="/images/master.jpg" alt="Мастер-классы").info__pic
     section.info.light-back
         .container
             .row
-                .col-sm-6
+                .col-xs-12.col-sm-6
                     img(src="/images/awwards.jpg" alt="Шоу-программа").info__pic
-                .col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent
+                .col-xs-12.col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent
                     h3.info__title Шоу-программа
                     p.info__desc Розыгрыши ценных призов, презентация новой продукции и конкурсы от участников, награждение победителей 3D Print Awards – на сцене мероприятия вы увидите много интересных активностей.
                     .info__btn-wrp
@@ -75,14 +75,14 @@ block content
         h3.section__title купить билет
         .container
             .row.ticket__wrap
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +ticket('Студенческий билет', 
                             '999', 
                             ['Сonsectetur adipiscing elit',
                             'Duis aute irure dolor',
                             'Excepteur sint occaecat',
                             'Totam rem aperiam'])
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +ticket('Билет на выставку', 
                             '3999', 
                             ['Сonsectetur adipiscing elit',
@@ -91,7 +91,7 @@ block content
                             'Totam rem aperiam',
                             'Sed ut perspiciatis',
                             'Neque porro quisquam'])
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +ticket('Билет на мастер-класс', 
                             '7999', 
                             ['Сonsectetur adipiscing elit',
@@ -103,7 +103,7 @@ block content
                             'Dolorem ipsum quia dolor',
                             'Nemo enim ipsam',
                             'Ut enim ad'])
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +ticket-sale('июньская скидка', 
                             '33999', 
                             ['Сonsectetur adipiscing elit',
@@ -117,11 +117,11 @@ block content
         h3.section__title сотрудничество
         .container
             .row.cooperation__wrap
-                .col-sm-4
+                .col-xs-12.col-sm-4
                     +cooperation('спонсору', 'стать спонсором')
-                .col-sm-4
+                .col-xs-12.col-sm-4
                     +cooperation('партнеру', 'стать партнером')
-                .col-sm-4
+                .col-xs-12.col-sm-4
                     +cooperation('участнику', 'стать участником')
     .logotypes
         +sponsors(['Генеральный спонсор пакетов',
@@ -142,25 +142,25 @@ block content
         h3.section__title контакты
         .container
             .row.contacts__wrap
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +contacts('александр архангельский',
                               'руководитель проекта',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +contacts('екатерина смирнова',
                               'куратор конференции',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +contacts('александр архангельский',
                               'pr-менеджер',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-                .col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3
                     +contacts('екатерина смирнова',
                               'посетителям',
                               '+7 (495) 123-45-67 (доб. 890)',
@@ -168,7 +168,7 @@ block content
                               'live:example')
     section.location
         img(src="/images/map-stub.jpg" alt="КВЦ Сокольники").location__stub
-        .container
+        .container.location__desc-wrap
             .row
                 .col-sm-4.col-sm-offset-8.col-lg-offset-0
                     .location__desc
@@ -177,6 +177,6 @@ block content
                             p КВЦ "Сокольники", 
                             p 5-й Лучевой просек, 7, 
                             p стр. 1, павильон 2
-                        img(src="/images/location-sponsor.jpg" alt="").location__sponsor
+                        img(src="/images/location-sponsor.png" alt="").location__sponsor
         .location__btn-wrap
             a(data-description="подробнее").btn-dark.btn-shadow

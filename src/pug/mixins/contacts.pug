@@ -1,0 +1,15 @@
+mixin contacts(name, position, phone, mail, skype)
+    .contacts__name #{name}
+    .contacts__position #{position}
+    .contacts__phone
+        a(href="tel:+74951234567")
+            i.fas.fa-phone
+            | #{phone}
+    .contacts__mail
+        a(href="mainto:" + mail)
+            i.fas.fa-envelope
+            | #{mail}
+    .contacts__skype        
+        a(href="skype:" + skype)
+            i.fab.fa-skype
+            | #{skype}

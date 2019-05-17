@@ -1,0 +1,14 @@
+mixin newslist(images, dates, descs)
+    section.newslist.light-back
+        h3.section__title новости
+        .container
+            .row
+                - for (var i = 0; i < 3; i++)
+                    .col-sm-4
+                        .newslist__item
+                            a(href="#").newslist__pic
+                                img(src="/images/" + images[i] alt="").newslist__pic
+                            .newslist__date #{dates[i]}
+                            a(href="#").newslist__desc #{descs[i]}
+            .newslist__btn-wrap.btn-centered
+                a(data-description="все новости").btn-empty

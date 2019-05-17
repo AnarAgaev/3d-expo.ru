@@ -1,0 +1,15 @@
+mixin partners
+    section.partners
+        h3.section__title Информационные партнеры
+        .container
+            .row
+                - for (var i = 0; i < 10; i++)
+                    .col-sm-3.col-md-2.partners__item-wrap
+                        a(href="#").partners__item
+                            img(src="" alt="")
+                .clearfix
+                .partners__btn-wrap
+                    .col-sm-6.btn-to-right
+                        a(data-description="стать партнером").btn-default
+                    .col-sm-6
+                        a(data-description="все партнеры").btn-empty

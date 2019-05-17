@@ -1,0 +1,11 @@
+mixin sponsors(titels)
+    section.sponsors
+        h3.section__title спонсоры
+        .container
+            .row.sponsors__wrap
+                each val in titels
+                    .col-sm-4.col-md-3.sponsors__item-wrap
+                        a(href="#").sponsors__item
+                            span.sponsors__titel= val
+                            span.sponsors__pic
+                                img(src="" alt="")

@@ -1,0 +1,25 @@
+//- Standart ticket
+mixin ticket(title, price, list)
+    .ticket__item 
+        .ticket__title #{title}
+        .ticket__price #{price}
+            span.ticket__price-letter руб.
+        ul.ticket__list
+            each val in list
+                li.ticket__list-item= val
+        .ticket__btn-wrap
+            a(href="" data-description="купить").btn-dark.btn-shadow
+            
+//- Ticket with sale
+mixin ticket-sale(title, price, list)
+    .ticket__item.ticket__item--sale
+        .ticket__title #{title}
+        .ticket__price #{price}
+            span.ticket__price-letter руб.
+            .ticket__price-sale #{price}
+                span.ticket__price-letter руб.
+        ul.ticket__list
+            each val in list
+                li.ticket__list-item= val
+        .ticket__btn-wrap
+            a(href="" data-description="купить").btn-light.btn-shadow

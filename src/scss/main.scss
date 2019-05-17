@@ -1,0 +1,1162 @@
+// INCLUDE FONTS
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&subset=cyrillic');
+
+// INCLUDE STYLE CONPONENTS
+@import 'components/reset';
+@import 'components/colors';
+@import 'components/media';
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/header';
+@import 'components/footer';
+
+// EXTENDS
+%content-section {
+    padding: 140px 0;
+    @media #{$laptop} {
+        padding: 133px 0;
+    }
+    @media #{$tablet} {
+        padding: 104px 0;
+    }
+}
+
+body {
+    background-color: $back-color;
+    font-family: 'Roboto', sans-serif;
+    &.menu-opened {
+        overflow: hidden;
+    }
+}
+
+.link-target {
+    position: absolute;
+    left: 0;
+    top: 0;
+    @media #{$tablet} {
+        top: -170px;
+    }
+}
+
+.page-contenet {
+    min-height: calc(100vh - 500px);
+    padding-top: 150px;
+}
+
+.section__title {
+    width: 100%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 0 15px 90px;
+    text-align: center;
+    color: $base-font-color;
+    @media #{$laptop} {
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        padding-bottom: 71px;
+    }
+    @media #{$tablet} {
+        font-size: 30px;
+        letter-spacing: 3px;
+        padding-bottom: 61px;
+    }
+}
+
+// Styles for index page
+.page-main .page-contenet {
+    padding-top: 0;
+}
+
+.light-back {
+    background-color: $dark-font-color;
+}
+
+// First screen on index page
+.first-screen {
+    background: url('../images/first-screen.jpg') center top no-repeat;
+    position: relative;
+    padding-bottom: 235px;
+    @media #{$laptop} {
+        padding-bottom: 260px;
+    }
+    @media #{$tablet} {
+        padding-bottom: 254px;
+    }
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(18, 18, 18, .86);
+    }
+    &__wrap {
+        padding-left: 40px;
+        position: relative;
+        @media #{$laptop} {
+            padding-left: 22px;
+        }
+    }
+    &__title {
+        color: $accent-color;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 110px;
+        font-weight: 700;
+        line-height: 110px;
+        text-transform: uppercase;
+        letter-spacing: 5.5px;
+        padding-top: 255px;
+        margin-bottom: 37px;
+        margin-left: -2px;
+        @media #{$laptop} {
+            font-size: 90px;
+            line-height: 94px;
+            letter-spacing: 4.5px;
+            padding-top: 292px;
+            margin-bottom: 39px;
+            margin-left: -3px;
+        }
+        @media #{$tablet} {
+            font-size: 76px;
+            line-height: 80px;
+            letter-spacing: 3.8px;
+            padding-top: 310px;
+            max-width: 500px;
+            margin-bottom: 42px;
+        }
+    }
+    &__subtitle {
+        color: $base-font-color;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.75px;
+        max-width: 550px;
+        margin-bottom: 24px;
+        @media #{$laptop} {
+            font-size: 26px;
+            line-height: 30px;
+            letter-spacing: 0.65px;
+            padding-right: 80px;
+            margin-bottom: 26px;
+        }
+        @media #{$tablet} {
+            font-size: 22px;
+            line-height: 26px;
+            letter-spacing: 0.55px;
+            padding-right: 0;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+    }
+    &__date {
+        color: $accent-color;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 1.2px;
+        margin-bottom: 11px;
+        @media #{$laptop} {
+            font-size: 22px;
+            letter-spacing: 1.1px;
+            margin-bottom: 8px;
+        }
+        @media #{$tablet} {
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-bottom: 9px;
+        }
+    }
+    &__location {
+        color: $base-font-color;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        max-width: 390px;
+        margin-bottom: 105px;
+        @media #{$laptop} {
+            font-size: 18px;
+            letter-spacing: 0.9px;
+            max-width: 350px;
+            margin-bottom: 95px;
+        }
+        @media #{$tablet} {
+            margin-bottom: 65px;
+        }
+    }
+    &__btn-wrap {
+        a:first-child {
+            margin-right: 30px;
+        }
+    }
+    &__btn-play {
+        position: absolute;
+        width: 124px;
+        height: 124px;
+        border-radius: 50%;
+        border: 2px solid $base-font-color;
+        top: 466px;
+        left: 819px;
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 0px rgba(171,230,71,.4);
+        transition: border-color .3s, box-shadow .5s ease-out;
+        .fas {
+            color: $base-font-color;
+            font-size: 33px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-10px, -50%) scaleX(0.8);
+            transition: all .3s;
+            @media #{$laptop} {
+                transform: translate(-9px, -50%) scaleX(0.8);
+                font-size: 28px;
+            }
+            @media #{$tablet} {
+                color: $accent-color;
+                transform: translate(-7px, -50%) scaleX(0.8);
+                font-size: 23px;
+            }
+        }
+        @media #{$tablet-plus} {
+            &:hover {
+                border-color: $accent-color;
+                box-shadow: 0px 0px 0px 30px rgba(171,230,71,0);
+                @media #{$laptop} {
+                    box-shadow: 0px 0px 0px 25px rgba(171,230,71,0);
+                }
+            }
+            &:hover .fas {
+                color: $accent-color;
+                animation: btn-play 1s ease-in 0s infinite;
+            }
+        }
+        @media #{$laptop} {
+            left: 663px;
+            top: 483px;
+            width: 100px;
+            height: 100px;
+        }
+        @media #{$tablet} {
+            width: 78px;
+            height: 78px;
+            border-color: $accent-color;
+            left: 571px;
+            top: 496px;
+        }
+    }
+}
+@keyframes btn-play {
+    0%   { transform: translate(-10px, -50%) scaleX(0.8); }
+    25%  { transform: translate(-13px, -50%) scaleX(0.8); }
+    50%  { transform: translate(-10px, -50%) scaleX(0.8); }
+    75%  { transform: translate( -7px, -50%) scaleX(0.8); }
+    100% { transform: translate(-10px, -50%) scaleX(0.8); }
+}
+
+// Style for all setctions information on index page
+.info {
+    position: relative;
+    padding: 213px 0 242px;
+    @media #{$laptop} {
+        padding: 163px 0 222px;
+    }
+    @media #{$tablet} {
+        padding: 115px 0 157px;
+    }
+    &__title {
+        color: $base-font-color;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5.6px;
+        position: relative;
+        padding-bottom: 31px;
+        padding-top: 18px;
+        margin-bottom: 53px;
+        line-height: 1.1;
+        @media #{$laptop} {
+            font-size: 46px;
+            letter-spacing: 4.6px;
+            padding-bottom: 23px;
+            margin-bottom: 38px;
+        }
+        @media #{$tablet} {
+            font-size: 34px;
+            letter-spacing: 3.4px;
+            padding-left: 17px;
+            padding-bottom: 19px;
+            margin-bottom: 31px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 6px;
+            border-radius: 3px;
+            background-color: #abe647;
+            @media #{$tablet} {
+                left: 17px;
+            }
+        }
+    }
+    &__desc {
+        max-width: 480px;
+        color: $base-font-color;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        padding: 10px 0;
+        @media #{$laptop} {
+            font-size: 18px;
+            line-height: 24px;
+            max-width: 455px;
+            padding: 8px 0;
+        }
+        @media #{$tablet} {
+            font-size: 15px;
+            line-height: 18px;
+            padding: 6px 0 7px 17px;
+        }
+    }
+    &__desc.accent {
+        font-weight: 700;
+    }
+    &__btn-wrp {
+        margin-top: 40px;
+         @media #{$laptop} {
+             margin-top: 35px;
+         }
+         @media #{$tablet} {
+            margin-top: 39px;
+            margin-left: 17px;
+         }
+    }
+    &__pic {
+        box-shadow: 0 23px 59px rgba(0, 0, 0, 0.4);
+        @media #{$laptop} {
+            margin-top: 5px;
+        }
+    }
+    &__left-indent {
+        @media #{$laptop} {
+            padding-left: 55px;
+        }
+        @media #{$tablet} {
+            padding-left: 0px;
+            padding-top: 3px;
+            margin-left: -1px;
+        }
+    }
+}
+
+// Style for subscribe setction on index page and and other pages
+.subscribe {
+    padding: 90px 0 115px;
+    @media #{$laptop} {
+        padding: 103px 0 106px;
+    }
+    @media #{$tablet} {
+        padding: 84px 0 86px;
+    }
+    .section__title {
+        padding-bottom: 60px;
+        @media #{$laptop} {
+            padding-bottom: 51px;
+        }
+    }
+    &__btn-wrap {
+        text-align: center;
+    }
+    .form-group:not(.checkbox) {
+        @media #{$laptop} {
+            width: 263px;
+            margin-bottom: 5px;
+        }
+    }
+    .form-group:not(.checkbox) .form-control {
+        @media #{$laptop} {
+            padding: 0 11px;
+        }
+    }
+    &-form > div:first-child .form-group {
+        @media #{$laptop} {
+            float: right;
+        }
+    }
+    form .checkbox {
+        left: 5px;
+        @media #{$laptop} {
+            max-width: 518px;
+            left: 3px;
+        }
+    }
+}
+
+// Style for cooperation setction on index page
+.cooperation {
+    @extend %content-section;
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 300px;
+        min-height: 335px;
+        border-radius: 20px;
+        background-color: $base-font-color;
+        margin: 0 auto;
+        position: relative;
+        padding: 35px 15px 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media #{$laptop} {
+            width: 270px;
+            min-height: 315px;
+        }
+        @media #{$tablet} {
+            width: 100%;
+            padding-top: 38px;
+        }
+    }
+    &__title {
+        line-height: 1.2;
+        color: $subtitle-font;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        text-align: center;
+        @media #{$laptop} {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        @media #{$tablet} {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+        }
+    }
+    &__desc {
+        min-height: 73px;
+        color: $subtitle-font;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.2;
+        @media #{$laptop} {
+            font-size: 14px;
+            line-height: 18px;
+        }
+        @media #{$tablet} {
+            font-size: 14px;
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #abe647;
+            border-radius: 50%;
+            margin: 18px auto 20px;
+            @media #{$laptop} {
+                margin: 15px auto 18px;
+            }
+            @media #{$tablet} {
+                margin: 11px auto 18px;
+            }
+        }
+    }
+    &__btn-wrap {
+        text-align: center;
+        padding-top: 21px;
+        padding-bottom: 35px;
+        @media #{$laptop} {
+            padding-top: 19px;
+        }
+        @media #{$tablet} {
+            padding-top: 12px;
+        }
+        .btn-dark::after {
+            @media #{$tablet} {
+                padding: 0 21px;
+            }
+        }
+    }
+}
+
+// Style for cooperation setction on index page
+.ticket {
+    @extend %content-section;
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        @media #{$tablet} {
+            & > div:nth-child(odd) > div {
+                transform: translateX(12px);
+            }
+            & > div:nth-child(even) > div {
+                transform: translateX(-12px);
+            }
+            & > div {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &__item {
+        background-color: $base-font-color;
+        min-height: 530px;
+        border-radius: 16px;
+        position: relative;
+        padding: 35px 0 115px;
+        height: 100%;
+        @media #{$laptop} {
+            min-height: 500px;
+        }
+        @media #{$tablet} {
+            width: 280px;
+            min-height: 460px;
+            margin: 0 auto;
+            padding: 37px 0 100px;
+        }
+    }
+    &__item--sale {
+        background: url('../images/ticket-sale-back.png');
+        background-size: cover;
+        .ticket__price {
+            width: 190px;
+            height: 80px;
+            border-radius: 26px;
+            background-color: $action-color;
+            margin: 0 auto;
+            color: $base-font-color;
+            @media #{$laptop} {
+                padding: 2px 0 0 1px;
+            }
+        }
+        .ticket__price-sale {
+            color: #c7c7c7;
+            font-size: 19px;
+            font-weight: 700;
+            position: relative;
+            @media #{$laptop} {
+                margin-top: -4px;
+            }
+            .ticket__price-letter {
+                font-size: 14px;
+                padding-left: 5px;
+                top: -1px;
+                position: relative;
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 48%;
+                height: 2px;
+                background-color: rgb(199, 199, 199);
+                opacity: 0.6;
+                z-index: 1;
+                position: absolute;
+                top: 13px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        .ticket__list-item {
+            color: #121212;
+            &::before {
+                background-color: #121212;
+            }
+        }
+    }
+    &__title {
+        min-height: 51px;
+        color: $back-color;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        text-align: center;
+        margin-bottom: 24px;
+        padding: 0 5px;
+        @media #{$laptop} {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+        @media #{$laptop} {
+            font-size: 18px;
+            line-height: 22px;
+            letter-spacing: 1.8px;
+            margin-bottom: 0;
+            min-height: 43px;
+        }
+    }
+    &__price {
+        color: $action-color;
+        font-weight: 900;
+        font-size: 33px;
+        text-align: center;
+        background-color: #e8e8e8;
+        line-height: 1.5;
+        @media #{$laptop} {
+            font-size: 30px;
+            line-height: 1.6;
+        }
+    }
+    &__price-letter {
+        font-size: 24px;
+        display: inline-block;
+        padding-left: 10px;
+        @media #{$laptop} {
+            font-size: 22px;
+        }
+    }
+    &__list {
+        padding: 35px 25px 0;
+        @media #{$laptop} {
+            padding: 23px 12px 0;
+        }
+        @media #{$tablet} {
+            padding: 27px 12px 0;
+        }
+        &-item {
+            color: $form-control-font;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            padding-left: 10px;
+            position: relative;
+            @media #{$laptop} {
+                font-size: 14px;
+                line-height: 22px;
+            }
+            @media #{$tablet} {
+                font-size: 16px;
+                line-height: 22px;
+                padding-left: 13px;
+            }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: $form-control-font;
+                top: 10px;
+                left: 0;
+                border-radius: 50%;
+                @media #{$laptop} {
+                    width: 3px;
+                    height: 3px;
+                    top: 8px;
+                    left: 3px;
+                }
+                @media #{$tablet} {
+                    width: 4px;
+                    height: 4px;
+                    left: 5px;
+                }
+            }
+        }
+    }
+    &__btn-wrap {
+        position: absolute;
+        bottom: 36px;
+        text-align: center;
+        width: 100%;
+        @media #{$tablet} {
+            bottom: 26px;
+        }
+        a {
+            min-width: 167px;
+            text-decoration: none;
+        }
+    }
+}
+
+// Style for logotypes setction with logotypes of partners on index page
+.logotypes {
+    @extend %content-section;
+    section:nth-child(n+2) {
+        margin-top: 115px;
+        @media #{$laptop} {
+            margin-top: 92px;
+        }
+        @media #{$tablet} {
+            margin-top: 77px;
+        }
+    }
+}
+
+// Style for sponsors setction
+.sponsors {
+    .section__title {
+        padding-bottom: 71px;
+        @media #{$laptop} {
+            padding-bottom: 48px;
+        }
+        @media #{$tablet} {
+            padding-bottom: 37px;
+        }
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item-wrap {
+        margin-bottom: 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @media #{$laptop} {
+            margin-bottom: 11px;
+        }
+        @media #{$tablet} {
+            margin-bottom: 5px;
+        }
+    }
+    &__item,
+    &__item:hover,
+    &__item:active {
+        text-decoration: none;
+    }
+    &__titel {
+        color:$base-font-color;
+        font-size: 14px;
+        font-weight: 1.2;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: 38px;
+        padding-bottom: 16px;
+        margin-top: 13px;
+        @media #{$laptop} {
+            font-size: 13px;
+            font-weight: 300;
+            padding-bottom: 14px;
+        }
+        @media #{$tablet} {
+            padding-bottom: 15px;
+        }
+    }
+    &__pic {
+        display: block;
+        background: $base-font-color;
+        height: 160px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        @media #{$laptop} {
+            height: 130px;
+        }
+        @media #{$tablet} {
+            height: 135px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #abe647;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all .3s;
+        }
+        img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    @media #{$tablet-plus} {
+        &__item:hover .sponsors__pic::after {
+            transform: translateX(0);
+            opacity: 0.3;
+        }
+    }
+}
+
+// Style for partners setction
+.partners {
+    .section__title {
+        padding-bottom: 71px;
+        @media #{$tablet} {
+            padding-bottom: 62px;
+        }
+    }
+    &__item-wrap {
+        margin-bottom: 26px;
+        @media #{$laptop} {
+            margin-bottom: 20px;
+        }
+    }
+    &__item {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 110px;
+        background-color: $base-font-color;
+        overflow: hidden;
+        @media #{$laptop} {
+            height: 89px;
+        }
+        @media #{$tablet} {
+            height: 107px;
+        }
+        img {
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #abe647;
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all .3s;
+        }
+        @media #{$tablet-plus} {
+            &:hover::after {
+                transform: translateX(0);
+                opacity: 0.3;
+            }
+        }
+    }
+    .partners__btn-wrap {
+        margin-top: 52px;
+        @media #{$laptop} {
+            margin-top: 39px;
+        }
+    }
+    .btn-to-right a {
+        float: right;
+    }
+}
+
+// Style for setction with news list on index page and and other pages
+.newslist {
+    @extend %content-section;
+    .section__title {
+        padding-bottom: 59px;
+    }
+    &__item {
+        text-align: left;
+        text-decoration: none;
+    }
+    &__pic {
+        margin-bottom: 37px;
+        display: block;
+        position: relative;
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1);
+        @media #{$laptop} {
+            margin-bottom: 27px;
+        }
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all .3s;
+            z-index: 1;
+        }
+        &::before {
+            background-image: linear-gradient(to top, #0d0f13 0%, rgba(15, 20, 31, 0) 100%);
+            opacity: 0.9;
+        }
+        &::after {
+            background-image: linear-gradient(to top, #abe647 0%, rgba(171, 230, 71, 1) 100%);
+            opacity: 0;
+        }
+        @media #{$tablet-plus} {
+            &:hover::before,
+            &:active::before {
+                opacity: 0;
+            }
+            &:hover::after,
+            &:active::after {
+                opacity: 0.4;
+            }
+        }
+    }
+    &__date {
+        text-align: left;
+        color: $news-date-font;
+        font-size: 15px;
+        font-style: italic;
+        text-decoration: none;
+        margin-bottom: 22px;
+        @media #{$laptop} {
+            margin-bottom: 13px;
+        }
+        @media #{$tablet} {
+            font-size: 14px;
+        }
+    }
+    &__desc {
+        display: block;
+        padding-right: 10px;
+        color: $base-font-color;
+        font-size: 22px;
+        font-weight: 500;
+        text-decoration: none;
+        @media #{$laptop} {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        @media #{$tablet} {
+            font-size: 17px;
+            padding-right: 0px;
+            &:hover,
+            &:active,
+            &:visited {
+                text-decoration: none;
+            }
+        }
+        &:hover,
+        &:active,
+        &:visited {
+            color: $base-font-color;
+        }
+    }
+    .btn-centered {
+        @media #{$tablet} {
+            margin-top: 57px;
+        }
+    }
+}
+
+// Setction location width google map on index page
+.location {
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    @media #{$laptop} {
+        min-height: 460px;
+    }
+    @media #{$tablet} {
+        min-height: 500px;
+    }
+    &__stub {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        max-width: none;
+    }
+    &__btn-wrap {
+        position: absolute;
+        bottom: 81px;
+        width: 100%;
+        text-align: center;
+        @media #{$laptop} {
+            bottom: 66px;
+        }
+        @media #{$tablet} {
+            bottom: 46px;
+        }
+    }
+    &__desc {
+        min-height: 288px;
+        box-shadow: 20px 35px 100px rgba(0, 0, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 6px 0px 0px rgba(171,230,71,1);
+        position: relative;
+        top: 60px;
+        left: 50%;
+        transform: translateX(600px);
+        padding-top: 33px;
+        @media #{$laptop} {
+            left: auto;
+            transform: translateX(0);
+            min-height: 263px;
+        }
+        @media #{$tablet} {
+            min-height: 260px;
+            left: -2px;
+            top: 61px;
+        }
+    }
+    &__title {
+        width: 100%;
+        display: block;
+        text-align: center;
+        color: #333333;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        @media #{$laptop} {
+            font-size: 26px;
+            letter-spacing: 2.6px;
+        }
+    }
+    &__addres {
+        width: 100%;
+        color: #333333;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        padding: 19px 0;
+        @media #{$laptop} {
+            padding: 15px 0;
+        }
+        @media #{$tablet} {
+            padding: 21px 0;
+        }
+    }
+    &__sponsor {
+        display: block;
+        position: relative;
+        margin: 27px auto 0;
+        @media #{$laptop} {
+            width: 214px;
+        }
+        @media #{$tablet}  {
+            width: 186px;
+            margin-top: 24px;
+        }
+
+    }
+}
+
+// Setction contacts on index page
+.contacts {
+    .link-target {
+        top: -100px;
+        @media #{$tablet} {
+            top: -180px;
+        }
+    }
+    position: relative;
+    @extend %content-section;
+    .section__title {
+        padding-bottom: 84px;
+        @media #{$laptop} {
+            padding-bottom: 65px;
+        }
+        @media #{$tablet} {
+            padding-bottom: 56px;
+        }
+    }
+    @media #{$tablet} {
+        padding-bottom: 35px;
+    }
+    &__wrap {
+        @media #{$tablet} {
+            display: flex;
+            flex-wrap: wrap;
+            & > div {
+                margin-bottom: 46px;
+            }
+            & > div:nth-child(odd) {
+                padding-left: 132px;
+            }
+            & > div:nth-child(even) {
+                padding-right: 117px;
+                padding-left: 32px;
+            }
+        }
+    }
+    &__name {
+        color: $base-font-color;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        letter-spacing: 0.9px;
+        @media #{$laptop} {
+            font-size: 20px;
+        }
+        @media #{$tablet} {
+            margin-bottom: 12px;
+        }
+    }
+    &__position {
+        color: #dddcdc;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 21px;
+        @media #{$laptop} {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        @media #{$tablet} {
+            margin-bottom: 19px;
+            margin-left: -1px;
+        }
+    }
+    .contacts__phone,
+    .contacts__mail,
+    .contacts__skype {
+        margin-bottom: 8px;
+        a {
+            color: $base-font-color;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: none;
+            transition: color .3s;
+            &:hover {
+                color: $base-font-color;
+            }
+            @media #{$tablet-plus} {
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+            i {
+                color: $accent-color;
+                display: inline-block;
+                margin-right: 15px;
+                font-size: 13px;
+                @media #{$laptop} {
+                    margin-right: 12px;
+                }
+            }
+            .fa-phone {
+                transform: scaleX(-1);
+            }
+            .fa-skype {
+                font-size: 15px;
+            }
+        }
+    }
+}

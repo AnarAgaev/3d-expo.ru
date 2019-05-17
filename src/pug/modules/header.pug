@@ -1,0 +1,56 @@
+header.header
+    .mobile-line
+    .container
+        .header-wrap
+            a(href="#").logo
+                img(src="/images/header-logo.png")
+            nav.main-nav
+                ul.main-nav__list
+                    li.main-nav__item
+                        a(href="#exposition").main-nav__link выставка
+                    li.main-nav__item
+                        a.main-nav__link участники
+                        span.caret
+                        .main-nav__drop-menu
+                            ul.main-nav__drop-list
+                                li.main-nav__drop-item
+                                    a(href="#").main-nav__drop-link Стать участником
+                                li.main-nav__drop-item
+                                    a(href="#").main-nav__drop-link Выставочная зона
+                    li.main-nav__item
+                        a(href="#").main-nav__link программа
+                    li.main-nav__item
+                        a(href="#").main-nav__link новости
+                    li.main-nav__item
+                        a(href="#contacts").main-nav__link контакты
+                    li.main-nav__item
+                        a.main-nav__link итоги
+                        span.caret
+                        .main-nav__drop-menu
+                            ul.main-nav__drop-list
+                                li.main-nav__drop-item
+                                    a(href="#").main-nav__drop-link ссылка в итогах
+                                li.main-nav__drop-item
+                                    a(href="#").main-nav__drop-link ссылка в итогах
+                    
+                    li.mobile-language__list
+                        a(href="").mobile-language__link.active-lang ru
+                        a(href="").mobile-language__link en
+            
+            .header-aside
+                a(data-description="купить билет").btn-default.btn__buy-ticket
+                .legal-age 6+
+                .language-switch 
+                    | ru
+                    span.caret
+                    ul.language-switch__list
+                        li.language-switch__item
+                            a(href="").language-switch__link.active-lang ru
+                        li.language-switch__item
+                            a(href="").language-switch__link en
+            
+            .burger-container
+                .burger
+                    .bar.bar__top
+                    .bar.bar__middle
+                    .bar.bar__bottom

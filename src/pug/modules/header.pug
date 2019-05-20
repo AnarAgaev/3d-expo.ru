@@ -1,12 +1,12 @@
-header.header
+header.header#index__header
     .mobile-line
     .container
         .header-wrap
-            a(href="#").logo
+            a(href="/").logo.hidden-item
                 img(src="/images/header-logo.png").logo__desktop
                 img(src="/images/mobile-header-logo.png").logo__mobile
             nav.main-nav
-                ul.main-nav__list
+                ul.main-nav__list.hidden-item
                     li.main-nav__item
                         a(href="#exposition").main-nav__link выставка
                     li.main-nav__item
@@ -34,11 +34,11 @@ header.header
                                 li.main-nav__drop-item
                                     a(href="#").main-nav__drop-link ссылка в итогах
                     
-                    li.mobile-language__list
+                    li.mobile-language__list.hidden-item
                         a(href="").mobile-language__link.active-lang ru
                         a(href="").mobile-language__link en
             
-            .header-aside
+            .header-aside.hidden-item
                 a(data-description="купить билет").btn-default.btn__buy-ticket
                 .legal-age 6+
                 .language-switch 
@@ -51,7 +51,7 @@ header.header
                             a(href="").language-switch__link en
             
             .burger-container
-                .burger
+                .burger.hidden-item
                     .bar.bar__top
                     .bar.bar__middle
                     .bar.bar__bottom

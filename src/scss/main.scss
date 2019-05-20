@@ -33,6 +33,19 @@ body {
     }
 }
 
+// Animation items on index page when user is scrollin screen
+.hidden-item {
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+}
+.hidden-item--show {
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.9s ease 0.15s, opacity 0.9s ease 0.15s;
+}
+
 .link-target {
     position: absolute;
     left: 0;
@@ -235,14 +248,25 @@ body {
             }
         }
     }
-    &__btn-play {
+    &__btn-play-wrap {
         position: absolute;
+        top: 466px;
+        left: 819px;
+        @media #{$laptop} {
+            left: 663px;
+            top: 483px;
+        }
+        @media #{$tablet} {
+            left: 571px;
+            top: 496px;
+        }
+    }
+    &__btn-play {
+        position: relative;
         width: 124px;
         height: 124px;
         border-radius: 50%;
         border: 2px solid $base-font-color;
-        top: 466px;
-        left: 819px;
         cursor: pointer;
         box-shadow: 0px 0px 0px 0px rgba(171,230,71,.4);
         transition: border-color .3s, box-shadow .5s ease-out;
@@ -278,8 +302,6 @@ body {
             }
         }
         @media #{$laptop} {
-            left: 663px;
-            top: 483px;
             width: 100px;
             height: 100px;
         }
@@ -287,8 +309,6 @@ body {
             width: 78px;
             height: 78px;
             border-color: $accent-color;
-            left: 571px;
-            top: 496px;
         }
         @media #{$mobile} {
             display: none;

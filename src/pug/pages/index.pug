@@ -17,72 +17,73 @@ block variables
     -var thisPage = 'page-main'
 
 block content
-    section.first-screen
+    section.first-screen#index__firstScreen
         .container
             .col-xs-12.col-md-7.first-screen__wrap
-                h1.first-screen__title 3D Print Expo 2019
-                h2.first-screen__subtitle Выставка передовых технологий 3D-печати и сканирования
-                .first-screen__date 4-5 октября, Москва
-                .first-screen__location КВЦ "Сокольники",5-й Лучевой просек, 7, стр. 1, павильон 2
+                h1.first-screen__title.hidden-item 3D Print Expo 2019
+                h2.first-screen__subtitle.hidden-item Выставка передовых технологий 3D-печати и сканирования
+                .first-screen__btn-play-wrap.hidden-item
+                    .first-screen__btn-play
+                        i.fas.fa-play
+                .first-screen__date.hidden-item 4-5 октября, Москва
+                .first-screen__location.hidden-item КВЦ "Сокольники",5-й Лучевой просек, 7, стр. 1, павильон 2
                 .first-screen__btn-wrap
-                    a(data-description="купить билет").btn-default
-                    a(data-description="аккредитация").btn-empty
-                .first-screen__btn-play
-                    i.fas.fa-play
+                    a(data-description="купить билет").btn-default.hidden-item
+                    a(data-description="аккредитация").btn-empty.hidden-item
     section.info
         span.link-target#exposition
         .container
             .row
-                .col-xs-12.col-sm-6
-                    h3.info__title Выставка
-                    p.info__desc Крупнейшая в Восточной Европе выставка передовых технологий 3D-печати и сканирования – 3D Print Expo. Здесь каждый сможет узнать, что такое аддитивные технологии, посмотреть, как работают и где используются 3D-печатные принтеры и сканеры в современном мире, а также узнать о последних достижениях в области 3D-печати.
-                    p.info__desc.accent Вас ждёт встреча с главными компаниями индустрии, гигантами трёхмерных технологий, которые определяют завтрашнее состояние этого рынка.
+                .col-xs-12.col-sm-6#index__exposition
+                    h3.info__title.hidden-item Выставка
+                    p.info__desc.hidden-item Крупнейшая в Восточной Европе выставка передовых технологий 3D-печати и сканирования – 3D Print Expo. Здесь каждый сможет узнать, что такое аддитивные технологии, посмотреть, как работают и где используются 3D-печатные принтеры и сканеры в современном мире, а также узнать о последних достижениях в области 3D-печати.
+                    p.info__desc.accent.hidden-item Вас ждёт встреча с главными компаниями индустрии, гигантами трёхмерных технологий, которые определяют завтрашнее состояние этого рынка.
                     .info__btn-wrp
-                        a(data-description="участники").btn-empty
-                .col-xs-12.col-sm-6
+                        a(data-description="участники").btn-empty.hidden-item
+                .col-xs-12.col-sm-6.hidden-item#index__exposition-image
                     img(src="/images/exposition.png" alt="Выставка").info__pic
     section.info.light-back
         .container
             .row
-                .col-xs-12.col-sm-6
-                    img(src="/images/lekory.png" alt="Лекорий").info__pic
-                .col-xs-12.col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent
-                    h3.info__title лекорий
-                    p.info__desc Лекторий 3D Print Expo 2019 соберет лучших специалистов индустрии, которые представят актуальные и успешные кейсы, расскажут о достижениях и прорывах этого года, обсудят тенденции и стратегии, охватывающие самые различные сферы применения 3D-технологий.
+                .col-xs-12.col-sm-6.hidden-item#index__lekory-image
+                    img(src="/images/lekory.png" alt="Лекторий").info__pic
+                .col-xs-12.col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent#index__lekory
+                    h3.info__title.hidden-item лекорий
+                    p.info__desc.hidden-item Лекторий 3D Print Expo 2019 соберет лучших специалистов индустрии, которые представят актуальные и успешные кейсы, расскажут о достижениях и прорывах этого года, обсудят тенденции и стратегии, охватывающие самые различные сферы применения 3D-технологий.
                     .info__btn-wrp
-                        a(data-description="программа").btn-empty
+                        a(data-description="программа").btn-empty.hidden-item
     section.info
         .container
             .row
-                .col-xs-12.col-sm-6
-                    h3.info__title Мастер-классы
-                    p.info__desc Захватывающие мастер-классы для детей и взрослых дадут возможность расширить круг интересов и насладиться увлекательным процессом.
+                .col-xs-12.col-sm-6#index__master
+                    h3.info__title.hidden-item Мастер-классы
+                    p.info__desc.hidden-item Захватывающие мастер-классы для детей и взрослых дадут возможность расширить круг интересов и насладиться увлекательным процессом.
                     .info__btn-wrp
-                        a(data-description="программа").btn-empty
-                .col-xs-12.col-sm-6
+                        a(data-description="программа").btn-empty.hidden-item
+                .col-xs-12.col-sm-6.hidden-item#index__master-image
                     img(src="/images/master.jpg" alt="Мастер-классы").info__pic
     section.info.light-back
         .container
             .row
-                .col-xs-12.col-sm-6
+                .col-xs-12.col-sm-6.hidden-item#index__awwards-image
                     img(src="/images/awwards.jpg" alt="Шоу-программа").info__pic
-                .col-xs-12.col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent
-                    h3.info__title Шоу-программа
-                    p.info__desc Розыгрыши ценных призов, презентация новой продукции и конкурсы от участников, награждение победителей 3D Print Awards – на сцене мероприятия вы увидите много интересных активностей.
+                .col-xs-12.col-sm-6.col-lg-offset-1.col-lg-5.info__left-indent#index__awwards
+                    h3.info__title.hidden-item Шоу-программа
+                    p.info__desc.hidden-item Розыгрыши ценных призов, презентация новой продукции и конкурсы от участников, награждение победителей 3D Print Awards – на сцене мероприятия вы увидите много интересных активностей.
                     .info__btn-wrp
-                        a(data-description="программа").btn-empty
-    section.ticket
-        h3.section__title купить билет
+                        a(data-description="программа").btn-empty.hidden-item
+    section.ticket#index__tickets
+        h3.section__title.hidden-item купить билет
         .container
             .row.ticket__wrap
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +ticket('Студенческий билет', 
                             '999', 
                             ['Сonsectetur adipiscing elit',
                             'Duis aute irure dolor',
                             'Excepteur sint occaecat',
                             'Totam rem aperiam'])
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +ticket('Билет на выставку', 
                             '3999', 
                             ['Сonsectetur adipiscing elit',
@@ -91,7 +92,7 @@ block content
                             'Totam rem aperiam',
                             'Sed ut perspiciatis',
                             'Neque porro quisquam'])
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +ticket('Билет на мастер-класс', 
                             '7999', 
                             ['Сonsectetur adipiscing elit',
@@ -103,7 +104,7 @@ block content
                             'Dolorem ipsum quia dolor',
                             'Nemo enim ipsam',
                             'Ut enim ad'])
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +ticket-sale('июньская скидка', 
                             '33999', 
                             ['Сonsectetur adipiscing elit',
@@ -113,15 +114,15 @@ block content
                             'Sed ut perspiciatis',
                             'Neque porro quisquam',
                             'Dolorem ipsum quia dolor'])
-    section.cooperation.light-back
-        h3.section__title сотрудничество
+    section.cooperation.light-back#index__cooperation
+        h3.section__title.hidden-item сотрудничество
         .container
             .row.cooperation__wrap
-                .col-xs-12.col-sm-4
+                .col-xs-12.col-sm-4.hidden-item
                     +cooperation('спонсору', 'стать спонсором')
-                .col-xs-12.col-sm-4
+                .col-xs-12.col-sm-4.hidden-item
                     +cooperation('партнеру', 'стать партнером')
-                .col-xs-12.col-sm-4
+                .col-xs-12.col-sm-4.hidden-item
                     +cooperation('участнику', 'стать участником')
     .logotypes
         +sponsors(['Генеральный спонсор пакетов',
@@ -137,40 +138,40 @@ block content
                 'Как разбогатеть внедряя в бизнес искусственный интеллект в бизнес искусственный',
                 'Как разбогатеть внедряя в бизнес искусственный интеллект в бизнес искусственн интеллект и'])
     +subscribe
-    section.contacts.light-back
+    section.contacts.light-back#index__contacts
         span.link-target#contacts
-        h3.section__title контакты
+        h3.section__title.hidden-item контакты
         .container
             .row.contacts__wrap
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +contacts('александр архангельский',
                               'руководитель проекта',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +contacts('екатерина смирнова',
                               'куратор конференции',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +contacts('александр архангельский',
                               'pr-менеджер',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-                .col-xs-12.col-sm-6.col-md-3
+                .col-xs-12.col-sm-6.col-md-3.hidden-item
                     +contacts('екатерина смирнова',
                               'посетителям',
                               '+7 (495) 123-45-67 (доб. 890)',
                               'example@company.com',
                               'live:example')
-    section.location
+    section.location#index__location
         img(src="/images/map-stub.jpg" alt="КВЦ Сокольники").location__stub
         .container.location__desc-wrap
             .row
-                .col-sm-4.col-sm-offset-8.col-lg-offset-0
+                .col-sm-4.col-sm-offset-8.col-lg-offset-0.hidden-item
                     .location__desc
                         h3.location__title Москва
                         .location__addres 
@@ -179,4 +180,4 @@ block content
                             p стр. 1, павильон 2
                         img(src="/images/location-sponsor.png" alt="").location__sponsor
         .location__btn-wrap
-            a(data-description="подробнее").btn-dark.btn-shadow
+            a(data-description="подробнее").btn-dark.btn-shadow.hidden-item

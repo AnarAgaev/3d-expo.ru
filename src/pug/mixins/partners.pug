@@ -1,15 +1,15 @@
 mixin partners
-    section.partners
-        h3.section__title Информационные партнеры
+    section.partners#index__partners
+        h3.section__title.hidden-item Информационные партнеры
         .container
-            .row
+            .row.hidden-item
                 - for (var i = 0; i < 10; i++)
                     .col-xs-6.col-sm-3.col-md-2.partners__item-wrap
                         a(href="#").partners__item
                             img(src="" alt="")
                 .clearfix
                 .partners__btn-wrap
-                    .col-xs-12.col-sm-6.btn-to-right
+                    .col-xs-12.col-sm-6.btn-to-right.hidden-item
                         a(data-description="стать партнером").btn-default
-                    .col-xs-12.col-sm-6
+                    .col-xs-12.col-sm-6.hidden-item
                         a(data-description="все партнеры").btn-empty

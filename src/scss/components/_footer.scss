@@ -4,11 +4,14 @@
     &__wrap {
         position: relative;
         overflow: hidden;
+        padding-bottom: 22px;
         @media #{$mobile} {
             display: flex;
             flex-direction: column;
             padding-left: 20px;
             padding-bottom: 65px;
+            max-width: 320px;
+            margin: 0 auto;
         }
     }
     @media #{$laptop} {

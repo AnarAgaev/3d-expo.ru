@@ -51,4 +51,63 @@ $(document).ready(function(){
         // Hide navigation if it is open
         if( $('body').hasClass('menu-opened') ) toggleNav()
     })
+
+    // Animation items on index page when user is scrolling screen -- Start
+    const SHOW_ITEM_DELAY_STEP = 0.2
+    const BASE__DELAY = 0.2
+    let showDelay = BASE__DELAY
+
+    // Function to display multiple items
+    function showItems(containerId) {
+        let hiddenItems = $('#' + containerId + ' .hidden-item'),
+            shownItems  = $('#' + containerId + ' .hidden-item.hidden-item--show')
+            numItems = hiddenItems.length - 1
+
+        // Show items if not shown
+        if( shownItems.length == 0 ) {
+            hiddenItems.each(function(index) {
+                $(this).css('transition-delay', showDelay + 's').addClass('hidden-item--show')
+
+                if( index != numItems )  showDelay += SHOW_ITEM_DELAY_STEP
+                else  showDelay = BASE__DELAY
+            })
+        }
+    }
+
+    // Function to display individual item
+    function showItem(elementId) {
+        // Show item if not shown
+        if( !$('#' + elementId).hasClass('hidden-item--show') ) {
+            $('#' + elementId).addClass('hidden-item--show')
+        }
+    }
+
+    // Listen scroll and show hidden elements only on index page
+    if( $('body').hasClass('page-main') ) {
+
+        let animatedElements = $('[id^="index__"]')
+
+        // Show items of first screen and nav right after document ready
+        showItems('index__header')
+        showItems('index__firstScreen')
+
+        // Show items on the page after scroll
+        $(window).scroll(function () {
+            let scrollTop = $(this).scrollTop(),
+                windowHeight = $( window ).height(),
+                pointOfDisplay = windowHeight/1.3
+
+            animatedElements.each(function(indx, element) {
+                let offsetTopElement = $(element).offset().top,
+                    elementId = $(element).attr('id')
+
+                if( (offsetTopElement - pointOfDisplay) < scrollTop ) {
+                    if( $(element).hasClass('hidden-item') ) showItem(elementId)
+                    else showItems(elementId)
+                }
+            })
+        })
+    }
+    // Animation items on index page when user is scrolling screen -- End
+
 })

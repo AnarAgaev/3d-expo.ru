@@ -1,8 +1,8 @@
 mixin sponsors(titels)
-    section.sponsors
-        h3.section__title спонсоры
+    section.sponsors#index__sponsors
+        h3.section__title.hidden-item спонсоры
         .container
-            .row.sponsors__wrap
+            .row.sponsors__wrap.hidden-item
                 each val in titels
                     .col-xs-6.col-sm-4.col-md-3.sponsors__item-wrap
                         a(href="#").sponsors__item
